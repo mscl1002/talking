@@ -50,6 +50,11 @@ fun inicio_sesion(){
         Spacer(modifier = Modifier.height(15.dp))
 
         OutlinedTextField(value = "", onValueChange = {}, label = {
+            Text(text = "Usuario")
+        })
+        Spacer(modifier = Modifier.height(15.dp))
+
+        OutlinedTextField(value = "", onValueChange = {}, label = {
             Text(text = "Contraseña")
         })
 

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.Talking" parent="android:Theme.Material.Light.NoActionBar" >
+
+    <style name="Theme.Talking" parent="android:Theme.Material.Light.NoActionBar">
         <item name="android:windowSplashScreenBackground">#44b7eb</item>
     </style>
 </resources>

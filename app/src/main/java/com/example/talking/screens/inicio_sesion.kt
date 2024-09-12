@@ -1,6 +1,5 @@
-package com.example.talking
+package com.example.talking.screens
 
-import android.graphics.Outline
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -14,8 +13,6 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
-import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -24,9 +21,10 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.talking.R
 
 @Composable
-fun Registro(){
+fun inicio_sesion(){
     Column (
         modifier = Modifier
             .fillMaxSize()
@@ -34,39 +32,28 @@ fun Registro(){
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
 
-        ){
+    ){
+        Image(painter = painterResource(id = R.drawable.logoo), contentDescription =  "login image",
+            modifier = Modifier.size(200.dp))
+
+        Spacer(modifier = Modifier.height(15.dp))
 
         Text(text = "TALKING FOOD", fontSize = 28.sp, fontWeight = FontWeight.Bold)
 
         Spacer(modifier = Modifier.height(15.dp))
 
         OutlinedTextField(value = "", onValueChange = {}, label = {
-            Text(text = "NOMBRES")
+            Text(text = "Usuario")
         })
         Spacer(modifier = Modifier.height(15.dp))
 
         OutlinedTextField(value = "", onValueChange = {}, label = {
-            Text(text = "APELLIDOS")
+            Text(text = "Usuario")
         })
         Spacer(modifier = Modifier.height(15.dp))
 
         OutlinedTextField(value = "", onValueChange = {}, label = {
-            Text(text = "EDAD")
-        })
-        Spacer(modifier = Modifier.height(15.dp))
-
-        OutlinedTextField(value = "", onValueChange = {}, label = {
-            Text(text = "FECHA DE NACIMIENTO")
-        })
-        Spacer(modifier = Modifier.height(15.dp))
-
-        OutlinedTextField(value = "", onValueChange = {}, label = {
-            Text(text = "CORREO")
-        })
-        Spacer(modifier = Modifier.height(15.dp))
-
-        OutlinedTextField(value = "", onValueChange = {}, label = {
-            Text(text = "CONTRASEÑA")
+            Text(text = "Contraseña")
         })
 
         Spacer(modifier = Modifier.height(15.dp))
@@ -74,6 +61,15 @@ fun Registro(){
         Button(onClick = {  }, colors = ButtonDefaults.buttonColors(
             containerColor = Color(0xFFBD931B)
         )
+        )
+        {
+            Text(text = "Iniciar Sesion")
+        }
+        Spacer(modifier = Modifier.height(5.dp))
+
+        Button(onClick = {  }, colors = ButtonDefaults.buttonColors(
+                containerColor = Color(0xFFBD931B)
+                )
         ) {
             Text(text = "Registrarse")
         }
@@ -86,6 +82,6 @@ fun Registro(){
 
 
     }
-
-
+    
+    
 }
